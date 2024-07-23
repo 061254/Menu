@@ -12,9 +12,8 @@
   <!-- スライドのラッパー -->
   <div class="swiper-wrapper">
     <!-- スライド 1 -->
-      <input type="button" button class="signin" value="ログイン" onclick="window.open('https://heleamc.github.io/PRO')">
-    </button>
-      </a>
+    <div class="swiper-slide">
+      <input type="button" class="signin" value="ログイン" onclick="window.open('https://heleamc.github.io/PRO')">
     </div>
     <!-- スライド 2 -->
     <div class="swiper-slide">Slide 2</div>
@@ -24,5 +23,12 @@
 </div>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        loop: true
+    });
+</script>
 </body>
 </html>

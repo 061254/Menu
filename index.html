@@ -5,6 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>横スクロール画像メニュー</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <style>
+        input[type="text"] {
+            outline: solid 0.2px #414141;
+            border-radius: 30px;
+            color: #ffffff;
+            background-color: #626262;
+            border: solid 1px #aaa;
+            padding: 10px;
+            height: 20px;
+            width: 225px;
+            font-size: 15px;
+            border: none;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif; /* 全体のフォントを設定 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* 背景色 */
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .swiper-slide {
+            margin: 20px 0; /* スライドの上下にマージンを追加 */
+        }
+
+        .highlight-box {
+            border: 2px solid #000; /* 枠線の色と太さ */
+            padding: 10px; /* 内側の余白 */
+            margin: 10px 0; /* 外側の余白 */
+            border-radius: 25px; /* 角を丸くする */
+            background-color: #21242A; /* 背景色 */
+        }
+
+        .highlight-box h1 {
+            color: #ffffff; /* テキストの色 */
+            font-size: 24px; /* フォントサイズ */
+            text-align: center; /* テキストの中央揃え */
+            font-family: sans-serif;
+        }
+
+        .highlight-box p {
+            color: #fff; /* テキストの色 */
+            font-size: 16px; /* フォントサイズ */
+            line-height: 1.5; /* 行間 */
+            margin: 0px 0; /* 上下の余白を設定 */
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container input[type="text"] {
+            margin-right: 10px; /* テキスト入力欄とボタンの間の余白 */
+        }
+
+        .highlight-box .signin {
+            display: block; /* ボタンをブロック要素として表示 */
+            margin-top: 10px; /* ボタンの上部余白 */
+            padding: 10px 20px; /* ボタンの内側余白 */
+            margin: 40px auto 0; /* ボタンを中央に配置 */
+            width: 300px;
+            font-family: sans-serif;
+            font-size: 16px; /* フォントサイズ */
+            color: #002D64; /* ボタンの文字色 */
+            background-color: #AAC7FF; /* ボタンの背景色 */
+            border: none; /* ボタンの枠線なし */
+            border-radius: 25px; /* ボタンの角を丸くする */
+            cursor: pointer; /* カーソルをポインタにする */
+            text-align: center; /* ボタンの文字を中央揃え */
+        }
+
+        .highlight-box .signin:hover {
+            background-color: #82ACFF; /* ホバー時の背景色 */
+        }
+
+        .alert-button {
+            padding: 10px 20px; /* ボタンの内側余白 */
+            font-family: sans-serif;
+            font-size: 16px; /* フォントサイズ */
+            color: #002D64; /* ボタンの文字色 */
+            width: 150px;
+            background-color: #AAC7FF; /* ボタンの背景色 */
+            border: none; /* ボタンの枠線なし */
+            border-radius: 25px; /* ボタンの角を丸くする */
+            cursor: pointer; /* カーソルをポインタにする */
+            text-align: center; /* ボタンの文字を中央揃え */
+        }
+
+        .alert-button:hover {
+            background-color: #82ACFF; /* ホバー時の背景色 */
+        }
+
+        /* Swiperのページネーションスタイル */
+        .swiper-pagination-bullet {
+            background: #000; /* ドットの色 */
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #fff; /* アクティブドットの色 */
+        }
+    </style>
 </head>
 <body>
 <!-- スライダーのコンテナ -->
@@ -13,13 +123,40 @@
   <div class="swiper-wrapper">
     <!-- スライド 1 -->
     <div class="swiper-slide">
-      <input type="button" class="signin" value="ログイン" onclick="window.open('https://heleamc.github.io/PRO')">
+      <div class="highlight-box">
+        <h1>v8.0.0 modmenu</h1>
+        <p id="1">H5GG、GameGuardianなどを使用しなくてもブラウザのみで機能します</p>
+        <p id="2">※一部対応していない機種、OSバージョン、ブラウザがあります</p>
+        <input type="button" class="signin" value="起動" onclick="window.open('https://061254.github.io/cloudfree_ver.1.0/')">
+      </div>
     </div>
     <!-- スライド 2 -->
-    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">
+      <div class="highlight-box">
+        <h1>脱獄ごっこProスキンのみ開放</h1>
+        <p>脱獄ごっこProでスキンを開放する手順</p>
+        <p>1. 脱獄ごっこProを開く</p>
+        <p>2. ロッカーに移動し、開放するスキンを決める。</p>
+        <p>3. 「もっていないものも表示」にチェックをする</p>
+        <p>4. レア度順に並べる</p>
+        <p>5. 開放したいスキンがレア度の高い順から何番目か数える。</p>
+        <p>6.サイトに戻り、テキスト欄にその番号を入力</p>
+        <div class="input-container">
+            <input type="text" id="changeCode" name="name" placeholder="ここに入力" minlength="3" maxlength="10" pattern="^[0-9_@]+$" >
+            <input type="button" class="alert-button" value="送信" onclick="showAlert()">
+        </div>
+      </div>
+    </div>
     <!-- スライド 3 -->
-    <div class="swiper-slide">Slide 3</div>
+    <div class="swiper-slide">
+      <div class="highlight-box">
+        <h1>Slide 3</h1>
+        <p>内容3</p>
+      </div>
+    </div>
   </div>
+  <!-- ページネーションのコンテナ -->
+  <div class="swiper-pagination"></div>
 </div>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -27,8 +164,17 @@
     const swiper = new Swiper(".swiper", {
         slidesPerView: 'auto',
         spaceBetween: 10,
-        loop: true
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
     });
+
+    function showAlert() {
+        const inputValue = document.getElementById('changeCode').value;
+        alert(`入力された数値あが正確である場合Bundle ID jp.litmus.ent.playingescape.proに送信されました ${inputValue}`);
+    }
 </script>
 </body>
 </html>
